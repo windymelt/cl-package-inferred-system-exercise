@@ -12,6 +12,6 @@
   :license "MIT"
   :class :package-inferred-system ;; You should specify this to use package-inferred-system.
   :defsystem-depends-on (:asdf-package-system) ;; You should specify this to use package-inferred-system.
-  :depends-on (:project/all) ;; Root dependency. Package PROJECT/ALL is defined at `all.lisp`.
+  :depends-on (:project/all) ;; Root dependency. Package PROJECT/ALL is defined at `all.lisp`. You CANNOT use its nickname `:project` as module name, because package-inferred-system resolves modules by its name.
   :pathname "src" ;; This clause modifies package prefix.
   :description "An example project illustrating package-inferred-system")
