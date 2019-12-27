@@ -1,0 +1,18 @@
+#!/bin/sh
+#|-*- mode:lisp -*-|#
+#|
+exec ros -Q -- $0 "$@"
+|#
+(progn ;;init forms
+  (ros:ensure-asdf)
+  (push *default-pathname-defaults* asdf:*central-registry*)
+  (ql:quickload '(:project)))
+
+(defpackage :ros.script.run.3786421859
+  (:use :cl))
+(in-package :ros.script.run.3786421859)
+
+(defun main (&rest argv)
+  (declare (ignorable argv))
+  (project/main:main))
+;;; vim: set ft=lisp lisp:
