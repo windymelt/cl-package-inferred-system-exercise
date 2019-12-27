@@ -10,7 +10,7 @@
   :version "0.1"
   :author "Windymelt"
   :license "MIT"
-  :class :package-inferred-system
-  :defsystem-depends-on (:asdf-package-system)
-  :depends-on (:project/main)
+  :class :package-inferred-system ;; You should specify this to use package-inferred-system.
+  :defsystem-depends-on (:asdf-package-system) ;; You should specify this to use package-inferred-system.
+  :depends-on (:project/main) ;; Root dependency.
   :description "An example project illustrating package-inferred-system")
